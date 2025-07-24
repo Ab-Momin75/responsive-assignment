@@ -1,0 +1,56 @@
+
+.text-primary{
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight:normal;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+*{
+    
+    padding: 0;
+    /* margin: auto; */
+    box-sizing: border-box;
+}
+body{
+    max-width: 1440px;
+    background-color:#F5F8FF;
+    margin: auto;
+}
+.nav-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+       
+}
+.nav-link{
+    display: flex;
+    gap:48px ;
+    list-style: none;
+
+}
+nav ul a{
+    text-decoration: none;
+    color: black;
+}
+.dark{
+    color: rgba(137, 135, 161, 1);;
+}
+/* Responsive Styles */
+@media  (max-width: 767px) {
+    .nav-link .nav-item{
+        display: none;
+        
+    }
+    .nav-section{
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .logo{
+        width: 63px;
+        height: 38px;
+    }
+}
+
