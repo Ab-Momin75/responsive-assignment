@@ -1,56 +1,126 @@
-
-.text-primary{
-  font-family: "Noto Serif", serif;
-  font-optical-sizing: auto;
-  font-weight:normal;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+.text-primary {
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 
-*{
-    
+.text-secondary {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+
     padding: 0;
     /* margin: auto; */
     box-sizing: border-box;
 }
-body{
+
+/* Common-style */
+.dark {
+    color: rgba(137, 135, 161, 1);
+}
+
+.yellow {
+    color: #E95A08;
+}
+
+body {
     max-width: 1440px;
-    background-color:#F5F8FF;
+    background-color: #F5F8FF;
     margin: auto;
 }
-.nav-section{
+
+.nav-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-       
+    margin-top: 30px;
+
 }
-.nav-link{
+
+.nav-link {
     display: flex;
-    gap:48px ;
+    gap: 48px;
     list-style: none;
 
 }
-nav ul a{
+
+nav ul a {
     text-decoration: none;
     color: black;
 }
-.dark{
-    color: rgba(137, 135, 161, 1);;
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    height: 460px;
+    margin-top: 120px;
 }
-/* Responsive Styles */
-@media  (max-width: 767px) {
-    .nav-link .nav-item{
+
+.hero-title {
+    font-weight: bold;
+    font-size: 65px;
+}
+
+.hero-p {
+    margin-top: 13px;
+}
+
+.hero-left {
+    margin-top: 125px;
+
+}
+
+.hero-img {
+    height: 355px;
+    width: 576px;
+}
+
+
+
+/* <------Responsive Styles-----> */
+
+@media (max-width: 767px) {
+    /* nav-section */
+
+    .nav-link .nav-item {
         display: none;
-        
+
     }
-    .nav-section{
+
+    .nav-section {
         margin-left: 16px;
         margin-right: 16px;
     }
-    .logo{
+
+    .logo {
         width: 63px;
         height: 38px;
     }
-}
 
+    /* hero-section */
+
+    .hero-section {
+        flex-direction: column-reverse;
+        margin-top: 28px;
+    }
+
+    .hero-img {
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-left {
+        margin-top: 28px;
+        margin-left: 16px;
+    }
+}
