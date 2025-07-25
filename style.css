@@ -25,9 +25,29 @@
 .dark {
     color: rgba(137, 135, 161, 1);
 }
+.medium-font-size{
+    font-size: 22px;
+}
 
 .yellow {
     color: #E95A08;
+}
+.button-primary{
+    background-color: #E95A08;
+    color: white;
+    width: 100%;
+    height: 50px;
+    font-weight:500;
+    border: none;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom:0px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.button-primary:hover{
+    background-color: rgba(5, 57, 57, 0.726);
 }
 
 body {
@@ -39,7 +59,6 @@ body {
 .nav-section {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin-top: 30px;
 
 }
@@ -59,21 +78,28 @@ nav ul a {
 .hero-section {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 460px;
     margin-top: 120px;
+    margin-bottom: 0px;
 }
 
 .hero-title {
     font-weight: bold;
     font-size: 65px;
+    margin-bottom: 0px;
 }
 
 .hero-p {
-    margin-top: 13px;
+    margin-top: 5px;
+    margin-bottom: 0px;
 }
 
 .hero-left {
-    margin-top: 125px;
+    margin-top: 75px;
+    align-items: center;
+    width: 570px;
+    
 
 }
 
@@ -82,45 +108,117 @@ nav ul a {
     width: 576px;
 }
 
+/* Plant-section */
+
+.plant-heading{
+    font-size: 50px;
+}
+.plant-intro{
+    margin-top:100px;
+    text-align: center;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:20px;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 8px;
+    margin-top: 20px;
+    /* width:100%; */
+    /* height: auto; */
+    /* display: flex;
+    flex-direction: column; */
+    align-items: center;
+    text-align: center;
+}
+
+.card-img{
+    border-radius: 10px;
+    width:100%;
+    height:auto;
+}
+.flower-name{
+    font-size: 1.375rem;
+    font-weight:500;
+  margin: 10px 0 5px;
+    /* text-align: center; */
+}
+.flower-price{
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.375rem;
+    /* text-align: center; */
+    margin:0 0 10px;
+    
+}
+
 
 
 /* <------Responsive Styles-----> */
 
-@media (max-width: 767px) {
-    /* nav-section */
+@media (max-width: 576px) {
 
     .nav-link .nav-item {
         display: none;
 
     }
-
-    .nav-section {
-        margin-left: 16px;
-        margin-right: 16px;
-    }
-
-    .logo {
-        width: 63px;
+    .logo{
+        width:63px;
         height: 38px;
     }
-
-    /* hero-section */
-
+    .nav-section {
+        align-items: center;
+        gap:185px;
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+    
     .hero-section {
-        flex-direction: column-reverse;
-        margin-top: 28px;
+        flex-direction:column-reverse;
+        margin-top: 60px;
     }
-
-    .hero-img {
-        max-width: 100%;
+    .hero-title{
+        font-size:1.5rem;
     }
-
-    .hero-title {
-        font-size: 1.5rem;
+    .hero-p{
+        font-size: 14px;
     }
 
     .hero-left {
-        margin-top: 28px;
-        margin-left: 16px;
+        margin-top: 20px;
+        width:90%;
     }
+
+    .hero-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .plant-intro {
+        margin-top: 30px;
+    }
+
+    .plant-heading {
+        font-size: 1.5rem;
+    }
+    .plant-subt{
+        font-size: 14px;
+    }
+
+    .card-container {
+        grid-template-columns:repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .card {
+        margin-top: 10px;
+        width: 100%;
+        margin-left: 0;
+    }
+    
 }
