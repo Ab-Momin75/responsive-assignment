@@ -18,8 +18,6 @@
 
     padding: 0;
     margin: 0;
-    /* margin-left: 10px; */
-    /* margin: 0; */
     box-sizing: border-box;
 }
 
@@ -165,6 +163,36 @@ nav ul a {
 
 }
 
+/* plant lover section */
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.trusted-badge {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 285px;
+    height: auto;
+    z-index: 10;
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.nursing {
+    width: auto;
+    height: auto;
+}
 
 .plant-lover {
     margin-top: 120px;
@@ -183,8 +211,6 @@ nav ul a {
     margin-left: 60px;
 
 }
-
-/* Latest deals section */
 
 .latest-deal {
     margin-top: 120px;
@@ -245,7 +271,7 @@ nav ul a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4),transparent);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent);
     z-index: 1;
 }
 
@@ -310,7 +336,7 @@ nav ul a {
 
 .join-title {
     font-size: 3rem;
-    padding:20px;
+    padding: 20px;
 }
 
 .join-form {
@@ -367,6 +393,7 @@ nav ul a {
     max-height: 35px;
     display: flex;
     justify-content: space-between;
+    gap: 24px;
 }
 
 .social img {
@@ -380,6 +407,10 @@ nav ul a {
 @media screen and (max-width: 767.98px) {
 
     .br-laptop {
+        display: none;
+    }
+
+    .trusted-badge {
         display: none;
     }
 
@@ -452,10 +483,17 @@ nav ul a {
         padding: 16px;
         margin-top: 40px;
     }
-    .plant-lover img{
+
+    .nursing {
         height: 100%;
         width: 100%;
     }
+
+    .plant-lover-description ul li {
+        margin: 0 10px;
+    }
+
+
 
     .plant-lover-description ul li {
         margin: 0 10px;
@@ -547,4 +585,5 @@ nav ul a {
         margin-top: 0;
         padding-top: 0;
     }
+
 }
