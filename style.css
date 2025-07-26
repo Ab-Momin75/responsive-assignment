@@ -17,7 +17,9 @@
 * {
 
     padding: 0;
-    /* margin: auto; */
+    margin: 0;
+    /* margin-left: 10px; */
+    /* margin: 0; */
     box-sizing: border-box;
 }
 
@@ -58,9 +60,9 @@
 }
 
 body {
-    /* max-width: 1440px; */
     background-color: #F5F8FF;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 .max-width {
@@ -83,7 +85,6 @@ body {
 
 nav ul a {
     text-decoration: none;
-    color: black;
 }
 
 .hero-section {
@@ -183,7 +184,7 @@ nav ul a {
 
 }
 
-
+/* Latest deals section */
 
 .latest-deal {
     margin-top: 120px;
@@ -224,18 +225,17 @@ nav ul a {
     position: relative;
     overflow: hidden;
     flex: 48%;
-    border-radius: 10px;
+    border-radius: 15px;
     height: 100%;
     max-width: 100%;
 }
 
 .deal-card img {
+    padding: 0;
     width: 100%;
-    /* height: auto; */
+    height: auto;
     display: block;
 }
-
-
 
 
 
@@ -244,7 +244,7 @@ nav ul a {
     top: 0;
     left: 0;
     width: 100%;
-    height: 95%;
+    height: 100%;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4),transparent);
     z-index: 1;
 }
@@ -259,6 +259,7 @@ nav ul a {
     z-index: 2;
 
 }
+
 .left {
     margin: 0;
     font-size: 1.25rem;
@@ -290,10 +291,11 @@ nav ul a {
     height: 100%;
 }
 
+/* Join section style */
 
-.join-section{
+.join-section {
     background-image: url('assets/news-letter-bg.png');
-    background-size:cover;
+    background-size: cover;
     background-position: center;
     width: 100vw;
     height: 535px;
@@ -305,44 +307,77 @@ nav ul a {
     margin-top: 120px;
 
 }
-.join-title{
+
+.join-title {
     font-size: 3rem;
+    padding:20px;
 }
 
-.join-form{
+.join-form {
     display: flex;
-    gap: 5px;
     justify-content: center;
-    flex-wrap: wrap;
 }
-.join-overlay{
+
+.join-overlay {
     text-align: center;
     color: white;
 }
-.join-form input{
+
+.join-form input {
     padding: 10px;
     width: 500px;
     border: none;
 }
-.join-form button{
-    background-color:#E95A08 ;
+
+.join-form button {
+    background-color: #E95A08;
     color: white;
     padding: 10px;
     text-align: center;
-    font-size:1rem ;
+    font-size: 1rem;
     border: none;
     cursor: pointer;
 }
 
-/* .content-inside{
-    display: inline;
-    gap:0px;
-} */
+/* footer section */
+
+.footer-section {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+}
+
+.social {
+    max-width: 260px;
+    max-height: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social img {
+    height: 36px;
+    width: 36px;
+}
 
 
 /* <------Responsive Styles-----> */
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 767.98px) {
 
     .br-laptop {
         display: none;
@@ -417,6 +452,10 @@ nav ul a {
         padding: 16px;
         margin-top: 40px;
     }
+    .plant-lover img{
+        height: 100%;
+        width: 100%;
+    }
 
     .plant-lover-description ul li {
         margin: 0 10px;
@@ -454,22 +493,58 @@ nav ul a {
         flex: 100%;
     }
 
-    .join-section{
+    .join-section {
         margin-top: 60px;
     }
-    .join-title{
-        width:auto;
+
+    .join-title {
+        width: auto;
         font-size: 1.5rem;
     }
-     .join-overlay{
-        margin-top:100px;
+
+    .join-overlay {
+        margin-top: 100px;
     }
-    .join-form input{
+
+    .join-form input {
         width: auto;
 
     }
-    .join-form button{
+
+    .join-form button {
         width: auto;
 
+    }
+
+    .footer-section {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-section>div {
+        width: 100%;
+        margin-bottom: 0;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .footer-section ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 8px;
+    }
+
+    .footer-section ul li a {
+        display: inline-block;
+    }
+
+    .links-2 {
+        margin-top: 0;
+        padding-top: 0;
     }
 }
